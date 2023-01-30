@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section><h1>SVG</h1></section>
+        <section>Scalable Vector Graphics</section>
+        <section>
+          <section>
+            <h3>2 types of Images</h3>
+            <ul>
+              <li>Bitmap(raster)</li>
+              <li>Vector</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Different Formats</h3>
+            <ul>
+              <li>PNG</li>
+              <li>JPEG</li>
+              <li>GIF</li>
+              <li>WebP</li>
+            </ul>
+          </section>
+          <section>
+            <h3>WebP</h3>
+            <ul>
+              <li>Announced by Google in 2010</li>
+              <li>Was intended to replace JPEG, GIF and PNG</li>
+              <li>Supports compression, animation, transparence</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h3>Lack of Support</h3>
+          <ul>
+            <li>Earlier the support of SVG images were limited.</li>
+            <li>On 31 August 2010 Google started to index SVG on the web</li>
+            <li>
+              On 8th December 2010 Google Image Search also began indexing SVG
+              files
+            </li>
+          </ul>
+        </section>
+        <section>
+          <section>
+            <h3>Main Difference</h3>
+            <ul>
+              <li>
+                Bitmap images simply define what color each pixel of the image
+                should be painted.
+              </li>
+              <li>
+                Vector Images provide a set of instructions about how the image
+                should be rendered
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>When use?</h3>
+            <ul>
+              <li>
+                Bitmap images are well suited for highly detailed images, such
+                as photographs
+              </li>
+              <li>
+                Vector images are well suited for less detailed images that need
+                to be scaled at different sizes, like icons or data
+                representations.
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h3>The problem</h3>
+          <ul>
+            <li>Bitmap image can be too heavy for low resolution devices</li>
+            <li>
+              Bitmap images tend to be blurry on large resolution devices.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>The problem</h3>
+          <ul>
+            <li>Bitmap image can be too heavy for low resolution devices</li>
+            <li>
+              Bitmap images tend to be blurry on large resolution devices.
+            </li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <h2 data-id="code-title">Text Format</h2>
+          <pre
+            data-id="code-animation"
+          ><code class="hljs html" data-trim data-line-numbers>
+						<svg width="100" height="100">
+							<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+						</svg>
+					</code></pre>
+          <svg width="100" height="100">
+            <circle
+              cx="50"
+              cy="50"
+              r="40"
+              stroke="green"
+              stroke-width="4"
+              fill="yellow"
+            />
+          </svg>
+        </section>
+        <section data-auto-animate>
+          <h2 data-id="code-title">Style with CSS</h2>
+          <pre
+            data-id="code-animation"
+          ><code class="hljs html" data-trim data-line-numbers>
+						<style>
+							.circle{
+								fill: red;
+								stroke: green;
+								cursor: pointer;
+							}
+						</style>
+					</code></pre>
+          <svg width="100" height="100" class="circle">
+            <circle class="circle" cx="50" cy="50" r="40" />
+          </svg>
+          <style>
+            .circle {
+              fill: red;
+              stroke: green;
+              cursor: pointer;
+            }
+          </style>
+        </section>
+        <section data-auto-animate>
+          <h2 data-id="code-title">JS EDIT</h2>
+          <pre
+            data-id="code-animation"
+          ><code class="hljs html" data-trim data-line-numbers>
+						<svg onclick="style.fill='yellow'" width="100" height="100" class="circle2" id="circle2">
+							<circle cx="50" cy="50" r="40" />
+						</svg>
+					</code></pre>
+          <svg
+            onclick="style.fill='yellow'"
+            width="100"
+            height="100"
+            class="circle2"
+            id="circle2"
+          >
+            <circle cx="50" cy="50" r="40" />
+          </svg>
+          <style>
+            .circle2 {
+              fill: lightblue;
+              stroke: green;
+              cursor: pointer;
+            }
+          </style>
+        </section>
+        <section>
+          <h3>What is SVG suitable for?</h3>
+          <ul>
+            <li>Logo Design</li>
+            <li>Diagrams</li>
+            <li>Animated Elements</li>
+            <li>Charts and Graphs</li>
+          </ul>
+        </section>
+        <section><h2>SMIL</h2></section>
+        <section>
+          <section>
+            <h2>How to create SVG</h2>
+          </section>
+          <section>
+            <h2>Manually</h2>
+            <ul>
+              <li>Adobe Illustrator, Photoshop, Animate, InDesign</li>
+              <li>Inkscape</li>
+              <li>GIMP</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Converting images</h2>
+            <ul>
+              <li>Google 'SVG converters'</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Download</h2>
+            <ul>
+              <li>https://svgsilh.com/</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h2>SVG Libraries</h2>
+          <ul>
+            <li>Snap.svg</li>
+            <li>D3.js</li>
+          </ul>
+        </section>
+				<section>
+          <h2>Conclusion</h2>
+          <ul class="r-fit-text">
+            <li>SVG images can be created and edited with any text editor</li>
+            <li>SVG images can be searched, indexed, scripted, and compressed</li>
+            <li>SVG images are scalable</li>
+            <li>SVG images can be printed with high quality at any resolution</li>
+            <li>SVG images are zoomable</li>
+            <li>SVG graphics do NOT lose any quality if they are zoomed or resized</li>
+            <li>SVG is an open standard</li>
+            <li>SVG files are pure XML</li>
+          </ul>
+        </section>
+				<section>
+          <h2>Thank you for your attention!</h2>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
